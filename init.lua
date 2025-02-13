@@ -17,6 +17,7 @@ end
 
 require "lazy_setup"
 require "polish"
+require "mason_setup"
 
 -- Mapeando o atalho para abrir e fechar o terminal
 vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
