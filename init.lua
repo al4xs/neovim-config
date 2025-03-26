@@ -27,15 +27,6 @@ vim.cmd [[
   autocmd TermOpen * startinsert | set nonu
 ]]
 
--- Salvar automaticamente ao digitar
-vim.api.nvim_exec([[
-  augroup AutoSave
-    autocmd!
-    " Salva automaticamente a cada alteração
-    autocmd TextChanged,TextChangedI * silent! write
-  augroup END
-]], false)
-
 vim.opt.number = true      -- Ativa a numeração absoluta
 vim.opt.relativenumber = false  -- Desativa a numeração relativa
 
