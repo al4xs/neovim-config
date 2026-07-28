@@ -30,27 +30,6 @@ vim.cmd [[
 vim.opt.number = true      -- Ativa a numeração absoluta
 vim.opt.relativenumber = false  -- Desativa a numeração relativa
 
--- Remove fundo de todos os highlights
-vim.cmd [[
-  hi StatusLine guibg=NONE ctermbg=NONE
-  hi StatusLineNC guibg=NONE ctermbg=NONE
-  hi TabLine guibg=NONE ctermbg=NONE
-  hi TabLineFill guibg=NONE ctermbg=NONE
-  hi TabLineSel guibg=NONE ctermbg=none
-
-  hi Normal guibg=NONE ctermbg=NONE
-  hi NormalNC guibg=NONE ctermbg=NONE
-  hi LineNr guibg=NONE ctermbg=NONE
-  hi SignColumn guibg=NONE ctermbg=NONE
-  hi VertSplit guibg=NONE ctermbg=NONE
-  hi StatusLine guibg=NONE ctermbg=NONE
-  hi StatusLineNC guibg=NONE ctermbg=NONE
-  hi Pmenu guibg=NONE ctermbg=NONE
-  hi PmenuSel guibg=NONE ctermbg=NONE
-  hi CursorLine guibg=NONE ctermbg=NONE
-  hi CursorColumn guibg=NONE ctermbg=NONE
-]]
-
 -- ========================
 -- Cursor minimalista
 -- ========================
