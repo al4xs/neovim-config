@@ -1,6 +1,8 @@
+
 -- This will run last in the setup process and is a good place to configure
 -- things like custom filetypes. This is just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
+
 
 -- Set up custom filetypes
 vim.filetype.add {
@@ -29,82 +31,6 @@ local default_options = {
   noremap = true,
   silent = true,
 }
-
--- =========================================================
--- Ctrl + Z: desfazer
--- =========================================================
-
--- Modo normal
-map("n", "<C-z>", "u", {
-  noremap = true,
-  silent = true,
-  desc = "Desfazer",
-})
-
--- Modo insert: desfaz sem sair do modo de inserção
-map("i", "<C-z>", "<C-o>u", {
-  noremap = true,
-  silent = true,
-  desc = "Desfazer",
-})
-
--- Modo visual
-map("x", "<C-z>", "<Esc>u", {
-  noremap = true,
-  silent = true,
-  desc = "Desfazer",
-})
-
--- =========================================================
--- Ctrl + C: copiar
--- =========================================================
-
--- Sem seleção: copia a linha atual inteira
-map("n", "<C-c>", '"+yy', {
-  noremap = true,
-  silent = true,
-  desc = "Copiar linha",
-})
-
--- Com seleção: copia apenas o texto selecionado
-map("x", "<C-c>", '"+y', {
-  noremap = true,
-  silent = true,
-  desc = "Copiar seleção",
-})
-
--- No modo insert: copia a linha atual sem sair do insert
-map("i", "<C-c>", '<C-o>"+yy', {
-  noremap = true,
-  silent = true,
-  desc = "Copiar linha",
-})
-
--- =========================================================
--- Ctrl + V: colar
--- =========================================================
-
--- Modo normal
-map("n", "<C-v>", '"+p', {
-  noremap = true,
-  silent = true,
-  desc = "Colar",
-})
-
--- No modo visual, substitui a seleção sem apagar
--- o conteúdo atual da área de transferência
-map("x", "<C-v>", '"_d"+P', {
-  noremap = true,
-  silent = true,
-  desc = "Colar sobre seleção",
-})
-
--- Modo insert
-map("i", "<C-v>", "<C-r>+", {
-  noremap = true,
-  silent = true,
-  desc = "Colar",
-})
 
 -- =========================================================
 -- Ctrl + X: recortar
@@ -234,13 +160,3 @@ map("i", "<M-j>", "<Esc>:move .+1<CR>==gi", default_options)
 map("x", "<M-k>", ":move '<-2<CR>gv=gv", default_options)
 map("x", "<M-j>", ":move '>+1<CR>gv=gv", default_options)
 
--- =========================================================
--- Ctrl + B: abrir ou fechar o Neo-tree
--- Mantém o atalho que já existia no seu arquivo
--- =========================================================
-
-map("n", "<C-b>", "<cmd>Neotree toggle<CR>", {
-  noremap = true,
-  silent = true,
-  desc = "Abrir/fechar Neo-tree",
-})
