@@ -160,3 +160,65 @@ map("i", "<M-j>", "<Esc>:move .+1<CR>==gi", default_options)
 map("x", "<M-k>", ":move '<-2<CR>gv=gv", default_options)
 map("x", "<M-j>", ":move '>+1<CR>gv=gv", default_options)
 
+-- =========================================================
+-- Undo/Redo estilo VS Code
+-- Ctrl + Z: desfazer
+-- Ctrl + Y: refazer
+-- =========================================================
+
+map("n", "<C-z>", "u", {
+  noremap = true,
+  silent = true,
+  desc = "Desfazer",
+})
+
+map("i", "<C-z>", "<C-g>u<C-o>u", {
+  noremap = true,
+  silent = true,
+  desc = "Desfazer",
+})
+
+map("x", "<C-z>", "<Esc>u", {
+  noremap = true,
+  silent = true,
+  desc = "Desfazer",
+})
+
+map("n", "<C-y>", "<C-r>", {
+  noremap = true,
+  silent = true,
+  desc = "Refazer",
+})
+
+map("i", "<C-y>", "<C-o><C-r>", {
+  noremap = true,
+  silent = true,
+  desc = "Refazer",
+})
+
+map("x", "<C-y>", "<Esc><C-r>", {
+  noremap = true,
+  silent = true,
+  desc = "Refazer",
+})
+
+-- Cria pontos de desfazer enquanto você digita
+map("i", "<Space>", "<Space><C-g>u", {
+  noremap = true,
+  silent = true,
+})
+
+map("i", "<CR>", "<CR><C-g>u", {
+  noremap = true,
+  silent = true,
+})
+
+map("i", ".", ".<C-g>u", {
+  noremap = true,
+  silent = true,
+})
+
+map("i", ",", ",<C-g>u", {
+  noremap = true,
+  silent = true,
+})
