@@ -222,3 +222,33 @@ map("i", ",", ",<C-g>u", {
   noremap = true,
   silent = true,
 })
+
+
+-- =========================================================
+-- Backspace/Delete: apagar seleção igual ao VS Code
+-- =========================================================
+
+map("x", "<BS>", '"_c', {
+  noremap = true,
+  silent = true,
+  desc = "Apagar seleção",
+})
+
+map("x", "<Del>", '"_c', {
+  noremap = true,
+  silent = true,
+  desc = "Apagar seleção",
+})
+
+-- Modo visual: mover seleção com Ctrl + seta
+map("x", "<C-Up>", ":move '<-2<CR>gv=gv", {
+  noremap = true,
+  silent = true,
+  desc = "Mover seleção para cima",
+})
+
+map("x", "<C-Down>", ":move '>+1<CR>gv=gv", {
+  noremap = true,
+  silent = true,
+  desc = "Mover seleção para baixo",
+})
