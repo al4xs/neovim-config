@@ -79,29 +79,24 @@ map("x", "<C-a>", "<Esc>ggVG", {
   desc = "Selecionar tudo",
 })
 
--- =========================================================
--- Ctrl + L: selecionar a linha inteira
--- Funciona no modo normal e no modo insert
--- =========================================================
+-- Ctrl + L: selecionar/desselecionar linha
 
 map("n", "<C-l>", "V", {
   noremap = true,
   silent = true,
-  desc = "Selecionar linha inteira",
+  desc = "Selecionar linha",
+})
+
+map("x", "<C-l>", "<Esc>", {
+  noremap = true,
+  silent = true,
+  desc = "Cancelar seleção",
 })
 
 map("i", "<C-l>", "<Esc>V", {
   noremap = true,
   silent = true,
-  desc = "Selecionar linha inteira",
-})
-
--- Quando já existe uma seleção de linhas,
--- Ctrl + L adiciona a próxima linha à seleção
-map("x", "<C-l>", "j", {
-  noremap = true,
-  silent = true,
-  desc = "Selecionar próxima linha",
+  desc = "Selecionar linha",
 })
 
 -- =========================================================
